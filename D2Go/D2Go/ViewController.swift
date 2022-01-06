@@ -35,12 +35,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let imgScaleX = Double(image!.size.width / CGFloat(PrePostProcessor.inputWidth));
         let imgScaleY = Double(image!.size.height / CGFloat(PrePostProcessor.inputHeight));
         
+//        print(imageView.frame.size.width, imageView.frame.size.height)
         let ivScaleX : Double = (image!.size.width > image!.size.height ? Double(imageView.frame.size.width / imageView.image!.size.width) : Double(imageView.image!.size.width / imageView.image!.size.height))
         let ivScaleY : Double = (image!.size.height > image!.size.width ? Double(imageView.frame.size.height / imageView.image!.size.height) : Double(imageView.image!.size.height / imageView.image!.size.width))
 
+//        print(ivScaleX, ivScaleY)
         let startX = Double((imageView.frame.size.width - CGFloat(ivScaleX) * imageView.image!.size.width)/2)
         let startY = Double((imageView.frame.size.height -  CGFloat(ivScaleY) * imageView.image!.size.height)/2)
 
+//        print(startX, startY)
         guard var pixelBuffer = resizedImage.normalized() else {
             return
         }

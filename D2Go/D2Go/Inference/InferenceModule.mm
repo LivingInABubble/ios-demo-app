@@ -39,15 +39,17 @@ const int threshold = 0.5;
 
 
         CFTimeInterval startTime = CACurrentMediaTime();
-        auto outputTuple = _impl.forward({ at::TensorList(v) }).toTuple();
+        auto outputTuple = _impl.forward({
+            tensor * 255.0
+        }).toTuple();
         CFTimeInterval elapsedTime = CACurrentMediaTime() - startTime;
         NSLog(@"inference time:%f", elapsedTime);
 
 
-        auto outputDict = outputTuple->elements()[1].toList().get(0).toGenericDict();
-        auto boxesTensor = outputDict.at("boxes").toTensor();
-        auto scoresTensor = outputDict.at("scores").toTensor();
-        auto labelsTensor = outputDict.at("labels").toTensor();
+        auto boxesTensor = outputTuple->elements()[0].toTensor();
+        auto labelsTensor = outputTuple->elements()[1].toTensor();
+        auto masksTensor = outputTuple->elements()[2].toTensor();
+        auto scoresTensor = outputTuple->elements()[3].toTensor();
 
         float* boxesBuffer = boxesTensor.data_ptr<float>();
         if (!boxesBuffer) {

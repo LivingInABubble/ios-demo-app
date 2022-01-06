@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		260F86432627C445008F2567 /* classes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 260F86422627C445008F2567 /* classes.txt */; };
-		26A8C10A26DFEC4700F4A58D /* d2go_optimized.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 26A8C10926DFEC4700F4A58D /* d2go_optimized.ptl */; };
 		26C3345C26210C3E00C37AD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3345B26210C3E00C37AD3 /* AppDelegate.swift */; };
 		26C3345E26210C3E00C37AD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3345D26210C3E00C37AD3 /* SceneDelegate.swift */; };
 		26C3346026210C3E00C37AD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3345F26210C3E00C37AD3 /* ViewController.swift */; };
@@ -26,11 +25,12 @@
 		26C33495262120CB00C37AD3 /* test1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C3348A262120CB00C37AD3 /* test1.png */; };
 		26C33496262120CB00C37AD3 /* test3.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C3348B262120CB00C37AD3 /* test3.png */; };
 		26C3349D2621215100C37AD3 /* InferenceModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26C3349B2621215100C37AD3 /* InferenceModule.mm */; };
+		CC160B8B966CC8E71DA80B96 /* Pods_D2Go.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E2B82C79B02CFC62CE89A5 /* Pods_D2Go.framework */; };
+		DAFFF30A270F4F4E00AEB2A1 /* model.ptl in Resources */ = {isa = PBXBuildFile; fileRef = DAFFF309270F4F4E00AEB2A1 /* model.ptl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		260F86422627C445008F2567 /* classes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = classes.txt; sourceTree = "<group>"; };
-		26A8C10926DFEC4700F4A58D /* d2go_optimized.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = d2go_optimized.ptl; sourceTree = "<group>"; };
 		26C3345826210C3E00C37AD3 /* D2Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D2Go.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C3345B26210C3E00C37AD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26C3345D26210C3E00C37AD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +52,10 @@
 		26C3349A2621215000C37AD3 /* D2Go-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "D2Go-Bridging-Header.h"; sourceTree = "<group>"; };
 		26C3349B2621215100C37AD3 /* InferenceModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = InferenceModule.mm; sourceTree = "<group>"; };
 		26C3349C2621215100C37AD3 /* InferenceModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InferenceModule.h; sourceTree = "<group>"; };
+		A3F79DF9E35E4CDF48F4638B /* Pods-D2Go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2Go.release.xcconfig"; path = "Target Support Files/Pods-D2Go/Pods-D2Go.release.xcconfig"; sourceTree = "<group>"; };
+		DAFFF309270F4F4E00AEB2A1 /* model.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.ptl; sourceTree = "<group>"; };
+		E0BC9F9CCCB0623238D93D2A /* Pods-D2Go.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2Go.debug.xcconfig"; path = "Target Support Files/Pods-D2Go/Pods-D2Go.debug.xcconfig"; sourceTree = "<group>"; };
+		E8E2B82C79B02CFC62CE89A5 /* Pods_D2Go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D2Go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC160B8B966CC8E71DA80B96 /* Pods_D2Go.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +73,8 @@
 		0D8B9D86CB0BD45A3A292E96 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				E0BC9F9CCCB0623238D93D2A /* Pods-D2Go.debug.xcconfig */,
+				A3F79DF9E35E4CDF48F4638B /* Pods-D2Go.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -78,6 +85,7 @@
 				26C3345A26210C3E00C37AD3 /* D2Go */,
 				26C3345926210C3E00C37AD3 /* Products */,
 				0D8B9D86CB0BD45A3A292E96 /* Pods */,
+				C77DBC2FB1ABDF178B764E71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +109,11 @@
 				26C3346126210C3E00C37AD3 /* Main.storyboard */,
 				26C3346426210C3F00C37AD3 /* Assets.xcassets */,
 				26C3346626210C3F00C37AD3 /* LaunchScreen.storyboard */,
+				DAFFF309270F4F4E00AEB2A1 /* model.ptl */,
 				26C3346926210C3F00C37AD3 /* Info.plist */,
 				26C3348A262120CB00C37AD3 /* test1.png */,
 				26C33484262120CB00C37AD3 /* test2.jpg */,
 				26C3348B262120CB00C37AD3 /* test3.png */,
-				26A8C10926DFEC4700F4A58D /* d2go_optimized.ptl */,
 				260F86422627C445008F2567 /* classes.txt */,
 			);
 			path = D2Go;
@@ -142,6 +150,14 @@
 			path = Live;
 			sourceTree = "<group>";
 		};
+		C77DBC2FB1ABDF178B764E71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8E2B82C79B02CFC62CE89A5 /* Pods_D2Go.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +165,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26C3346C26210C3F00C37AD3 /* Build configuration list for PBXNativeTarget "D2Go" */;
 			buildPhases = (
+				55A43C0632F5C490F1722C8D /* [CP] Check Pods Manifest.lock */,
 				26C3345426210C3E00C37AD3 /* Sources */,
 				26C3345526210C3E00C37AD3 /* Frameworks */,
 				26C3345626210C3E00C37AD3 /* Resources */,
@@ -200,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAFFF30A270F4F4E00AEB2A1 /* model.ptl in Resources */,
 				26C3346826210C3F00C37AD3 /* LaunchScreen.storyboard in Resources */,
 				26C33490262120CB00C37AD3 /* test2.jpg in Resources */,
 				26C3346526210C3F00C37AD3 /* Assets.xcassets in Resources */,
@@ -207,11 +225,35 @@
 				26C33495262120CB00C37AD3 /* test1.png in Resources */,
 				26C33496262120CB00C37AD3 /* test3.png in Resources */,
 				260F86432627C445008F2567 /* classes.txt in Resources */,
-				26A8C10A26DFEC4700F4A58D /* d2go_optimized.ptl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55A43C0632F5C490F1722C8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-D2Go-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		26C3345426210C3E00C37AD3 /* Sources */ = {
@@ -374,6 +416,7 @@
 		};
 		26C3346D26210C3F00C37AD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0BC9F9CCCB0623238D93D2A /* Pods-D2Go.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -418,6 +461,7 @@
 		};
 		26C3346E26210C3F00C37AD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3F79DF9E35E4CDF48F4638B /* Pods-D2Go.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -18,7 +18,7 @@ class PrePostProcessor : NSObject {
     static let inputHeight = 640
 
     static let outputColumn = 6 // left, top, right, bottom, label, and score
-    static let threshold : Float = 0.5 // score above which a detection is generated
+    static let threshold : Float = 0.6 // score above which a detection is generated
 
     static func cleanDetection(imageView: UIImageView) {
         if let layers = imageView.layer.sublayers {
@@ -41,6 +41,7 @@ class PrePostProcessor : NSObject {
                 let top = imgScaleY * Double(truncating: outputs[i*outputColumn+1])
                 let right = imgScaleX * Double(truncating: outputs[i*outputColumn+2])
                 let bottom = imgScaleY * Double(truncating: outputs[i*outputColumn+3])
+//                print(left, top, right, bottom)
                 
                 let rect = CGRect(x: startX+ivScaleX*left, y: startY+top*ivScaleY, width: ivScaleX*(right-left), height: ivScaleY*(bottom-top))
                 
@@ -54,6 +55,10 @@ class PrePostProcessor : NSObject {
     
     static func showDetection(imageView: UIImageView, nmsPredictions:[Prediction], classes: [String]) {
         for prediction in nmsPredictions {
+//            print(prediction.rect)
+//            print(prediction.score)
+//            print(prediction.classIndex)
+//            print(classes[prediction.classIndex])
             let bbox = UIView(frame: prediction.rect)
             bbox.backgroundColor = UIColor.clear
             bbox.layer.borderColor = UIColor.yellow.cgColor
@@ -61,11 +66,11 @@ class PrePostProcessor : NSObject {
             imageView.addSubview(bbox)
             
             let textLayer = CATextLayer()
-            textLayer.string = String(format: " %@ %.2f", classes[prediction.classIndex], prediction.score)
+            textLayer.string = String(format: " %.2f", prediction.score)
             textLayer.foregroundColor = UIColor.white.cgColor
             textLayer.backgroundColor = UIColor.magenta.cgColor
             textLayer.fontSize = 14
-            textLayer.frame = CGRect(x: prediction.rect.origin.x, y: prediction.rect.origin.y, width:100, height:20)
+            textLayer.frame = CGRect(x: prediction.rect.origin.x, y: prediction.rect.origin.y, width:35, height:20)
             imageView.layer.addSublayer(textLayer)
         }
     }
